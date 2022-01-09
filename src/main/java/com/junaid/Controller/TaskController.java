@@ -38,10 +38,11 @@ public class TaskController {
 		return taskRepo.save(tm);
 	}
 
-	@PutMapping("/tasks")
-	public TaskModel puttask(@RequestBody TaskModel tm){
+	//not working
+	@PutMapping("/tasks/{Taskid}")
+	public TaskModel puttask(@PathVariable String Taskid,@RequestBody TaskModel tm){
 
-		return taskRepo.save(null);
+		return taskRepo.save(tm);
 	}
 
 	@DeleteMapping("/tasks/{Taskid}")
