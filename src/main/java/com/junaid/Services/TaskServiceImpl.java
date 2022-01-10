@@ -44,11 +44,8 @@ public class TaskServiceImpl implements TaskService {
 			taskModel.setName(tm.getName());
 			taskModel.setDesc(tm.getDescr());
 		}
-		removeTask(taskid);
 		setTask(taskModel);
 		return taskModel;
 	}
-	
-	
 
 }
